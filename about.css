@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+html {
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+span {
+    color: royalblue;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: relative;
+}
+nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav h2 {
+    cursor: pointer;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 20%;
+}
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+nav ul li {
+    width: 80px;
+    position: relative;
+    height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+nav img {
+    width: 50px;
+    display: none;
+}
+nav ul li:hover:before {
+    width: 100%;
+    transition-duration: 0.5s;
+}
+nav ul li::before {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 0%;
+    background-color: royalblue;
+    bottom: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+button {
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    background-color: royalblue;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-profileBtn {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid transparent;
+    background-color: royalblue;
+    border-radius: 20px;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* the navigation bar code ends here */
+.des {
+    width: 40%;
+    height: 60%;
+    background-color: rgba(187, 10, 227, 0.55);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.text {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.text h2 {
+    font-size: 32px;
+}
+.text p {
+    font-size: 12px;
+    padding-top: 10px;
+}
+.text button {
+    width: 35%;
+    height: 30px;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-left: -300px;
+    cursor: pointer;
+    color: black;
+}
+
+.text a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 35%;
+    height: 30px;
+    border: 1px solid transparent;
+    outline: none;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    margin-left: -300px;
+    cursor: pointer;
+    color: black;
+    font-size: 11px;
+}
+
+.img {
+    position: absolute;
+    bottom: 20%;
+    right: 5%;
+}
+.img img {
+    width: 42rem;
+}
+.section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.Bio {
+    width: 100%;
+    height: 25rem;
+    background-color: rgb(250, 250, 250);
+}
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 100%;
+}
+.title hr {
+    width: 7%;
+    border: 1px solid black;
+    margin: 10px;
+}
+.title h2,
+.Edu .tit {
+    color: royalblue;
+}
+.Bio-inf {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.Bio-inf div {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: end;
+    padding: 30px;
+    position: relative;
+}
+.Bio-inf div p,
+.Bio-inf .bioo ol li {
+    font-size: 13px;
+}
+.Bio-inf .bioo ol {
+    list-style-type: disc;
+}
+.Bio-inf .story::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    background-color: royalblue;
+    border-radius: 50%;
+    top: 50%;
+    left: 100%;
+}
+
+.Bio-inf div hr {
+    width: 80%;
+    border: 1px solid black;
+}
+.Bio-inf .bioo {
+    text-align: start;
+    align-items: flex-start;
+}
+.Edu {
+    width: 100%;
+    height: 20rem;
+}
+.Edu .tit {
+    text-align: center;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Edu-list {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.Edu-list > div {
+    height: 50%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 5px;
+}
+.Edu-list > div img {
+    width: 30px;
+    margin: 10px;
+}
+.Edu-list > div p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    color: royalblue;
+}
+.education {
+    width: 100%;
+    height: 20rem;
+    background-color: white;
+}
+.education > div {
+    position: relative;
+}
+.dess {
+    position: absolute;
+    top: 2%;
+    font-size: 40px;
+    color: rgba(52, 48, 63, 0.311);
+}
+.education .tit {
+    text-align: center;
+    height: 30%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.education .list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.education .list > div {
+    width: 45%;
+    height: 95%;
+    background-color: rgba(255, 255, 255, 0.735);
+    box-shadow: rgb(0 0 0 / 25%) 0px 14px 28px, rgb(0 0 0 / 1%) 0px 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 13px;
+}
+.education .list h2 {
+    color: rgb(52, 52, 52);
+}
+.education .list h3 {
+    color: royalblue;
+}
+.education .list small {
+    margin-top: -10px;
+    margin-bottom: 10px;
+    color: rgb(210, 209, 209);
+}
+.education .list p {
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    height: 5rem;
+    background-color: royalblue;
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+}
+@media (max-width: 800px) {
+    nav {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    nav h2 {
+        cursor: pointer;
+        font-size: 15px;
+    }
+    nav ul {
+        list-style: none;
+        display: block;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.256);
+        overflow: hidden;
+    }
+    nav img {
+        width: 50px;
+        display: block;
+        z-index: 100000;
+    }
+    .close {
+        display: none;
+    }
+    nav ul li {
+        width: 80px;
+        position: relative;
+        height: 30px;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    nav ul li:hover:before {
+        width: 100%;
+        transition-duration: 0.5s;
+    }
+    nav ul li::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 0%;
+        background-color: royalblue;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    .clear {
+        height: 0rem;
+    }
+    .text {
+        width: 90%;
+        height: 40%;
+        top: 20%;
+        left: 10%;
+    }
+    .text h2 {
+        font-size: 32px;
+    }
+    .text p {
+        font-size: 12px;
+        padding-top: 10px;
+    }
+    .text button {
+        width: 65%;
+        height: 30px;
+        margin-left: -30px;
+    }
+    #map {
+        width: 80%;
+        height: 20rem;
+    }
+    .Bio {
+        width: 100%;
+        height: fit-content;
+    }
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        width: 100%;
+    }
+    .title hr {
+        width: 7%;
+        border: 1px solid black;
+        margin: 10px;
+    }
+    .title h2,
+    .Edu .tit {
+        color: royalblue;
+    }
+    .Bio-inf {
+        height: fit-content;
+        flex-wrap: wrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .Bio-inf div {
+        width: 20rem;
+        border: 1px solid black;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        text-align: end;
+        padding: 20px;
+        position: relative;
+    }
+    .Bio-inf div p,
+    .Bio-inf .bioo ol li {
+        font-size: 13px;
+    }
+    .Bio-inf .bioo ol {
+        list-style-type: disc;
+    }
+    .Bio-inf .story::after {
+        display: none;
+    }
+    .Edu-list {
+        height: fit-content;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .Edu {
+        height: fit-content;
+    }
+    .Edu-list > div {
+        height: 50%;
+        width: 20rem;
+        display: flex;
+        margin: 10px;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        border-radius: 5px;
+    }
+    .education {
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+    }
+    .education > div {
+        position: relative;
+    }
+    .dess {
+        position: absolute;
+        top: 2%;
+        font-size: 40px;
+        color: rgba(52, 48, 63, 0.311);
+    }
+    .education .tit {
+        text-align: center;
+        height: fit-content;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .education .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: fit-content;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .education .list > div {
+        width: 15rem;
+        margin: 10px;
+        height: 95%;
+        background-color: rgba(145, 145, 145, 0.735);
+        border-radius: 3px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        flex-direction: column;
+        padding: 13px;
+    }
+    .education .list h2 {
+        color: royalblue;
+    }
+    .education .list h3 {
+        color: white;
+    }
+    .education .list small {
+        margin-top: -10px;
+        margin-bottom: 10px;
+        color: rgb(210, 209, 209);
+    }
+    .education .list p {
+        color: rgb(0, 0, 0);
+    }
+}

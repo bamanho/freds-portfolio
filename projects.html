@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/project.css') }}">
+    
+    <title>My Project</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h2>My portfolio</h2>
+                <ul id="list" class="clear">
+                    <li><a href="{{url_for('views.home')}}">About me</a></li>
+                    <li><a href="{{url_for('views.project_page')}}">Projects</a></li>
+                </ul>
+                <img id="drop" src="{{ url_for('static', filename='images/menu.png') }}" alt="">
+                
+            </nav>
+           <div class="text">
+            <h2 style="color: #343437;">My Projects</h2>
+            <small>In this page you will witness some part of my previous and future work, including web programming, and real life projects.</small>
+           </div>
+        </header>
+        <section>
+            <div class="dis">
+                <div class="tit">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="con">
+
+                    <div>
+                         <div>
+                            <h2 style="color: royalblue;">Purchase Order</h2>
+                            <small>DESCRIPTION: Led project with a team consisting of the implementation of a purchase order tracker for the International University of Grand-Bassam.</small>
+                       </div>
+                       <div>
+                            <h2 style="color: royalblue;">Support</h2>
+                            <small>PHP, Html, Css, Javascript, Mysql.</small>
+                       </div>
+                    </div>
+                    <div>
+                         <div>
+                            <h2 style="color: royalblue;">Healthcare Website</h2>
+                            <small>DESCRIPTION: Web application proposing registration for health diagnosis, </small>
+                       </div>
+                       <div>
+                            <h2 style="color: royalblue;">Support</h2>
+                            <small>Javascript, Java, Html, Css.</small>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="dis">
+                <div class="tit">
+                    <h2>Ongoing projects</h2>
+                </div>
+                <div class="con">
+                    <div>
+                       <div>
+                            <h2 style="color: royalblue;">E-Commerce</h2>
+                            <small>DESCRIPTION: Creation of a website proposing different type of articles like shirts, shoes, watches...</small>
+                       </div>
+                       <div>
+                            <h2 style="color: royalblue;">Support</h2>
+                            <small>Javascript, Html5, Css.</small>
+                       </div>
+                    </div>
+                    <div>
+                        <div>
+                            <h2 style="color: royalblue;">Gaming</h2>
+                            <small>DESCRIPTION: Development of a rubix cube game</small>
+                       </div>
+                       <div>
+                            <h2 style="color: royalblue;">Support</h2>
+                            <small>Javascript, 3DrealVFX, Java.</small>
+                       </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <div class="tit">
+                <h2>All Projects</h2>
+                <table id="customers">
+                    <tr>
+                      <th>Project Name</th>
+                      <th>Project Description</th>
+                      <th>Project Tool</th>
+                      <th>Project Sentence</th>
+                    </tr>
+                    {% for item in  projects%}
+                    <tr>
+                      <td>{{item.project_name}}</td>
+                      <td>{{item.project_description}}</td>
+                      <td>{{item.project_tool}}</td>
+                      <td>{{item.project_sentence}}</td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+            </div>
+            
+        </div>
+      
+        <section>
+            <div id="map"></div>
+        </section>
+        <section>
+            <footer>
+                <div>
+                    <h2>My portfolio</h2>
+                </div>
+                <div>
+                    <p>Alright reserved &copy; 2022</p>
+                </div>
+            </footer>
+        </section>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKg9FINnC6s9dRf4zSwb8P0LzK5s7Fkkc&callback=initMap&v=weekly"
+          async
+        ></script>
+        <script>
+            let map;
+    
+            function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8,
+            });
+            }
+        </script>    
+        <script>
+            let drop = document.getElementById('drop');
+            let list = document.getElementById('list');
+
+            drop.onclick = () =>{
+                list.classList.toggle('clear')
+            }
+        </script>
+    </div>
+</body>
+</html>

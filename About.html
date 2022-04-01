@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h2>My portfolio</h2>
+                <ul id="list" class="clear">
+                    <li><a href="{{url_for('views.home')}}">About me</a></li>
+                    <li><a href="{{url_for('views.project_page')}}">Projects</a></li>
+                </ul>
+                <img id="drop" src="{{ url_for('static', filename='images/menu.png') }}" alt="">
+                <a class="view-profileBtn" href="#bio"> View Profile </a>
+            </nav>
+            <div class="des">
+
+            </div>
+            <div class="text">
+                <div>
+                    <h2>Hello I am Fred, a  <span>graduate student,</span> <br>a <span>future computer engineer and software programmer</span></h2>
+                    <p>Let's change the world together.</p>
+    
+                </div>
+                <a class="skillsBtnLink" href="#my-skills"> My Skills </a>
+            </div>
+            <div class="img">
+                <img class="close" src="{{ url_for('static', filename='images/undraw_programming_2svr.svg') }}" alt="">
+            </div>
+        </header>
+        <section>
+           <div class="Bio">
+            <div class="title">
+                <hr>
+                <h2 id="bio">BIO</h2>
+                <hr>
+            </div>
+            <div class="Bio-inf">
+                <div class="story">
+                    <h2> My story <hr></h2>
+                    <p> I would like to first take this opportunity to introduce myself as a Graduate Student at the University of Texas A&M University Commerce, 
+                        pursuing  a Master degree in Computer Science. My expected graduation date is May of 2024. I am currently practicing and looking for more experiences 
+                         and knowledge to continue my career path. My curriculum is comprised of courses like Database Systems, 
+                        Analysis of Algorithms, Web Technologies, Software Engineering (under Prof. Song Huang), Networking, 
+                        Specification and design of Graphical User Interface has assisted me to gain profound knowledge in the field of Computer Science.</p>                    
+                </div>
+                <div class="bioo">
+                    <h2> Bio <hr></h2>
+                    <ol>
+                       <li>Name: Boka Fred Morrell Amanho</li>
+                       <li>School: Texas A&M University-Commerce</li>
+                       <li>Major: Computer Science</li>
+                       <li>Hobbies: Movies, Reading books, Going out</li>
+                       <li>Age : 29</li>
+                    </ol>                    
+                </div>
+            </div>
+           </div>
+        </section>
+        <section>
+            <div class="Edu">
+                <div class="tit">
+                    <h2 id="my-skills">Skills | Expertise</h2>
+                </div>
+                <div class="Edu-list">
+                    <div>
+                        <p><img src="{{ url_for('static', filename='images/experience.png') }}" alt=""> C/C++</p>
+                        <small>Front-End and Back-end development, desktop applications</small>
+                    </div>
+                    <div>
+                        <p><img src="{{ url_for('static', filename='images/experience.png') }}" alt=""> Java</p>
+                        <small>Front-End and Back-end development, desktop applications</small>
+                    </div>
+                    <div>
+                        <p><img src="{{ url_for('static', filename='images/experience.png') }}" alt=""> HTML</p>
+                        <small>Web programming, Web applications, websites</small>
+                    </div>
+                    <div>
+                        <p><img src="{{ url_for('static', filename='images/experience.png') }}" alt=""> CSS</p>
+                        <small>Design for websites and web applications</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="education">
+                <div class="tit">
+                    <h1>Education</h1>
+                    <p style="margin-top: 20px; margin-bottom: 20px;">Here are listed my last 2 studies from my computer science career.</p>
+                </div>
+                <div class="list">
+                    <div>
+                        <h2>2022-2024</h2>
+                        <h3>Master in Computer Science</h3>
+                        <p>From Texas A&M University-Commerce, TX, United States.</p>
+                    </div>
+                    <div>
+                        <h2>2015-2020</h2>
+                        <h3>Bachelor in Computer Science</h3>
+                        <p>From the International University of Grand-Bassam, Ivory Coast.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <footer>
+                <div>
+                    <h2>My portfolio</h2>
+                </div>
+                <div>
+                    <p>All Rights Reserved &copy; 2022</p>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
